@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Search, Github, Download, Share2 } from "lucide-react";
+import { Search, Telescope, Download, Share2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -37,7 +37,7 @@ export function DashboardHeader({ currentUsername }) {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-2 font-bold hover:opacity-80 transition-opacity" aria-label="Go to Home">
-          <Github className="w-5 h-5" />
+          <Telescope className="w-5 h-5" />
           <span className="hidden sm:inline-block">DevScope</span>
         </Link>
         

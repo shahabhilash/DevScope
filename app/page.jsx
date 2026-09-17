@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { Search, Github, Activity, PieChart, Sparkles, TrendingUp } from "lucide-react";
+import { Search, Telescope, Activity, PieChart, Sparkles, TrendingUp } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -11,6 +11,11 @@ import { ThemeToggle } from "@/components/theme-toggle";
 export default function Home() {
   const [username, setUsername] = useState("");
   const router = useRouter();
+
+  const components = { Search, Telescope, Activity, PieChart, Sparkles, TrendingUp, Input, Button, ThemeToggle, motion };
+  for (const [name, comp] of Object.entries(components)) {
+    if (!comp) console.error(`CRITICAL: Component ${name} is undefined!`);
+  }
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -26,7 +31,7 @@ export default function Home() {
       
       <header className="container mx-auto px-6 py-6 flex justify-between items-center z-10">
         <div className="flex items-center gap-2 font-bold text-xl tracking-tight">
-          <Github className="w-6 h-6" />
+          <Telescope className="w-6 h-6" />
           <span>DevScope</span>
         </div>
         <ThemeToggle />
