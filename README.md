@@ -1,60 +1,60 @@
-# DevScope - Premium GitHub Analytics Platform
+# DevScope
 
-DevScope is a production-ready, modern GitHub analytics dashboard that provides deep insights into developer profiles. It leverages the GitHub REST API for metrics and Google's Gemini AI to generate automated skill assessments and career recommendations.
+DevScope is a premium GitHub analytics dashboard that provides deep, AI-powered insights into developer profiles. Simply search for any GitHub username to visualize their repository growth, language distribution, and get automated skill assessments powered by Google's Gemini AI.
 
-## Features
-- **Comprehensive Analytics:** Visualize language distribution, repository growth, and stars using Recharts.
-- **AI-Powered Insights:** Get Gemini-generated summaries of a developer's expertise and portfolio strength.
-- **Premium UI:** Glassmorphic design, smooth Framer Motion animations, and full Dark/Light mode support.
-- **Performance Optimized:** Uses Next.js App Router, dynamic imports for heavy chart libraries, and optimized Next.js Image components for high Lighthouse scores.
-- **Export & Share:** Instantly share profiles or export them to PDF format.
+## 🚀 Key Features
 
-## Tech Stack
-- **Framework:** Next.js 14 (App Router)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Animations:** Framer Motion
+- **Deep Analytics:** Interactive charts for contribution graphs, language usage, and repository statistics using Recharts.
+- **AI Skill Assessment:** Intelligent, automated analysis of developer strengths and expertise using Gemini.
+- **Premium Design:** A modern, glassmorphic UI built with Tailwind CSS and Framer Motion.
+- **Lightning Fast:** Built on Next.js 14 App Router for optimal performance.
+
+## 📂 Project Structure
+
+```text
+├── app/                  # Next.js App Router pages and API routes
+│   ├── api/insights/     # Gemini AI API endpoints
+│   ├── dashboard/        # Dashboard views and error handling
+│   └── page.jsx          # Landing page
+├── components/           # Reusable UI and Dashboard components
+│   ├── dashboard/        # Feature-specific components (Charts, Profile, etc.)
+│   └── ui/               # Base UI components (Buttons, Inputs)
+├── lib/                  # Utility functions and GitHub API client
+└── public/               # Static assets
+```
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 14
+- **Styling:** Tailwind CSS + Framer Motion
 - **Icons:** Lucide React
-- **Data Visualization:** Recharts
-- **AI Integration:** `@google/genai` (Gemini 2.5 Pro)
+- **Charts:** Recharts
+- **AI:** Google Gemini (`@google/genai`)
 
-## Getting Started
+## 💻 Getting Started
 
 ### Prerequisites
-- Node.js 18+
-- npm or yarn
-- A Google Gemini API Key
+Make sure you have Node.js installed. You will also need a free **Gemini API Key** (from Google AI Studio) and a **GitHub Personal Access Token**.
 
 ### Installation
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/devscope.git
-   cd devscope
-   ```
-
-2. **Install dependencies:**
+1. **Install Dependencies**
    ```bash
    npm install
    ```
 
-3. **Set up Environment Variables:**
-   Copy the example `.env` file and insert your Gemini API Key.
-   ```bash
-   cp .env.example .env.local
+2. **Set up Environment Variables**
+   Create a `.env.local` file in the root directory and add your keys:
+   ```env
+   GEMINI_API_KEY=your_gemini_key_here
+   GITHUB_TOKEN=your_github_token_here
    ```
-   Edit `.env.local` to include your key.
 
-4. **Run the Development Server:**
+3. **Run the App**
    ```bash
    npm run dev
    ```
-   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   Open [http://localhost:3000](http://localhost:3000) in your browser to view the dashboard!
 
-## Deployment
-DevScope is fully optimized and ready to be deployed on Vercel.
-
-1. Push your code to a GitHub repository.
-2. Import the project into Vercel.
-3. Add the `GEMINI_API_KEY` to your Vercel Environment Variables.
-4. Deploy!
+---
+*Built as a personal project to explore modern Next.js, API integrations, and generative AI.*
