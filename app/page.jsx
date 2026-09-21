@@ -76,6 +76,12 @@ export default function Home() {
             </Button>
           </form>
 
+          <div className="mt-6 flex justify-center">
+            <Button variant="outline" className="rounded-full shadow-sm bg-background/50 backdrop-blur-sm" type="button">
+              Compare Two Developers
+            </Button>
+          </div>
+
           <div className="pt-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
             <FeatureCard
               icon={<Activity className="w-6 h-6 text-blue-500" />}
