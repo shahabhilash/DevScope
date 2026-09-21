@@ -44,9 +44,7 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className="max-w-4xl mx-auto space-y-8"
         >
-          <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">
-            <Sparkles className="w-3 h-3 mr-1" /> Now with AI Insights powered by Gemini
-          </div>
+
 
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight">
             Uncover the story behind <br className="hidden md:inline" />
