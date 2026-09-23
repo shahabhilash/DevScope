@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { Search, Telescope, Activity, PieChart, Sparkles, TrendingUp } from "lucide-react";
+import { Search, Telescope, Activity, Sparkles, TrendingUp } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -12,10 +12,7 @@ export default function Home() {
   const [username, setUsername] = useState("");
   const router = useRouter();
 
-  const components = { Search, Telescope, Activity, PieChart, Sparkles, TrendingUp, Input, Button, ThemeToggle, motion };
-  for (const [name, comp] of Object.entries(components)) {
-    if (!comp) console.error(`CRITICAL: Component ${name} is undefined!`);
-  }
+
 
   const handleSearch = (e) => {
     e.preventDefault();
